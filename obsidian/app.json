@@ -1,0 +1,12 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "Notes",
+  "foldHeading": true,
+  "foldIndent": true,
+  "promptDelete": true,
+  "fileSortOrder": "alphabetical",
+  "vimMode": true
+}

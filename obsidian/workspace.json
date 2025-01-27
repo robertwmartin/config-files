@@ -1,0 +1,168 @@
+{
+  "main": {
+    "id": "fad3a7082e4159f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "31abd77c7f144c5d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "57ee6bdcf6b2237a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bd01b76ceb094043",
+    "type": "split",
+    "children": [
+      {
+        "id": "db8a1c2552bdd3f5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d89705d13315b971",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "cdfbadcd12c3e2d6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "24cd5e79e4b3235a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6acb31da17eeb337",
+    "type": "split",
+    "children": [
+      {
+        "id": "d7ebc60aa3b067e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2868b070c5a63bfa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "9f7ff5061a5c4915",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": true,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false
+    }
+  },
+  "active": "57ee6bdcf6b2237a",
+  "lastOpenFiles": [
+    "Gamemaster Aids/01 Dungeon Dressing Legends.md",
+    "Gamemaster Aids/20 Wilderness Dressing Savannah.md",
+    "Gamemaster Repository/Boarding House.md",
+    "Bibliography/Bibliography.md",
+    "Templates/Definition.md",
+    "Templates/Bibliography Template.md",
+    "Gamemaster Repository/Bog Witch.md",
+    "Gamemaster Aids/06 Dungeon Dressing Doors.md",
+    "Gamemaster Aids/19 Wilderness Dressing Tundra.md",
+    "Gamemaster Aids/Telling a Story With Encounters.md",
+    "Gamemaster Aids/Monsters are Scary.md",
+    "Gamemaster Aids/Designing Memorable Monsters.md",
+    "Quotes/Idleness quote.md",
+    "Quotes/Hope quote.md",
+    "Templates/Remember This.md",
+    "Templates/Podcast Note.md",
+    "Templates/GMDB-Index.md",
+    "Notes/Waking-Up-Moment-2022.md",
+    "Gamemaster Aids/27 Dungeon Dressing Wandering Monsters.md",
+    "Gamemaster Aids/25 Dungeon Dressing Sarcophagi.md",
+    "Gamemaster Aids/26 Dungeon Dressing Thrones.md",
+    "Gamemaster Aids/24 Dungeon Dressing Miscellaneous Features.md",
+    "Gamemaster Aids/23 Dungeon Dressing Miscellaneous Decorations.md",
+    "Gamemaster Aids/23 Wilderness Dressing Bandits.md",
+    "Gamemaster Aids/22 Dungeon Dressing Lights & Illuminations.md",
+    "Gamemaster Aids/22 Wilderness Dressing- Travellers.md",
+    "Gamemaster Aids",
+    "Gamemaster Repository",
+    "GM Aids",
+    "New folder",
+    "Untitled.canvas"
+  ]
+}

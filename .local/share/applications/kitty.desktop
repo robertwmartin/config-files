@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kitty
+GenericName=Terminal
+Comment=Modern, hackable, GPU-based terminal
+Exec=/opt/kitty/bin/kitty
+Icon=/opt/kitty/share/icons/hicolor/256x256/apps/kitty.png
+Categories=System;TerminalEmulator;
+Terminal=false
+

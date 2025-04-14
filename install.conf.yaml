@@ -1,0 +1,15 @@
+- defaults:
+    link:
+      force: true
+
+- link:
+    ~/.config/kitty: .config/kitty
+    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
+    ~/bin/kitty-update.sh: bin/kitty-update.sh
+
+- shell:
+    - echo "🧰 Ensuring /opt/kitty is available and symlinked"
+    - '[ -f /usr/local/bin/kitty ] || sudo ln -sf /opt/kitty/bin/kitty /usr/local/bin/kitty'
+    - echo "📦 Checking for Git"
+    - 'which git || (echo "Installing Git..." && sudo apt update && sudo apt install -y git)'
+

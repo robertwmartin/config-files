@@ -6,6 +6,7 @@
     ~/.config/kitty: .config/kitty
     ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
     ~/bin/kitty-update.sh: bin/kitty-update.sh
+    ~/.zshrc: .zshrc
 
 - shell:
     - echo "🧰 Ensuring /opt/kitty is available and symlinked"

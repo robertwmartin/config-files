@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Mount OneDrive Cloud
+Comment=Mount OneDrive using rclone
+Exec=kitty -e /home/rmartin/bin/OneDriveCloudMount.sh
+Terminal=false
+Type=Application
+Icon=cloud
+Categories=Utility;
+

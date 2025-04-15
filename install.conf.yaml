@@ -9,6 +9,7 @@
     ~/.zshrc: .zshrc 
     ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
     ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
+    ~/.vimrc: .vimrc
 
 
 - shell:

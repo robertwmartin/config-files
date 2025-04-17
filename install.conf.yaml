@@ -10,11 +10,19 @@
     ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
     ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
     ~/.vimrc: .vimrc
-
+    ~/.zshrc: .zshrc
+    ~/.config/zsh: .config/zsh
 
 - shell:
     - echo "🧰 Ensuring /opt/kitty is available and symlinked"
     - '[ -f /usr/local/bin/kitty ] || sudo ln -sf /opt/kitty/bin/kitty /usr/local/bin/kitty'
     - echo "📦 Checking for Git"
     - 'which git || (echo "Installing Git..." && sudo apt update && sudo apt install -y git)'
+    - echo "📦 Installing CLI tools"
+    - sudo apt update
+    - sudo apt install -y git ripgrep fzf bat eza fd-find tldr
+    - echo "🔗 Fixing fd and bat symlinks"
+    - mkdir -p ~/bin
+    - ln -sf $(which fdfind) ~/bin/fd
+    - ln -sf $(which batcat) ~/bin/bat
 

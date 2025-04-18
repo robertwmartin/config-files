@@ -12,6 +12,7 @@
     ~/.vimrc: .vimrc
     ~/.zshrc: .zshrc
     ~/.config/zsh: .config/zsh
+    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
 
 - shell:
     - echo "🧰 Ensuring /opt/kitty is available and symlinked"
@@ -33,4 +34,9 @@
         | sudo tee /etc/apt/sources.list.d/vscodium.list
     - sudo apt update
     - sudo apt install -y codium
+    - echo "🐱 Installing Kitty terminal"
+    - '[ ! -d /opt/kitty ] && curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty || echo "Kitty already installed in /opt/kitty"'
+    - echo "📂 Ensuring ~/.local/share/applications exists"
+    - mkdir -p ~/.local/share/applications
+    - ln -sf /opt/kitty/bin/kitty ~/.local/bin/kitty
 

@@ -1,0 +1,14 @@
+# Ignore OS & editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Optional: ignore compiled files or temporary scripts
+*.pyc
+*.o
+*.log
+
+# Optional: ignore backup vsix or cache folders
+vscodium/extensions/*.vsix~
+

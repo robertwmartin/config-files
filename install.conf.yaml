@@ -6,7 +6,7 @@
     ~/.config/kitty: .config/kitty
     ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
     ~/bin/kitty-update.sh: bin/kitty-update.sh
-    ~/.zshrc: .zshrc 
+    ~/.zshrc: .zshrc
     ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
     ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
     ~/.vimrc: .vimrc
@@ -15,28 +15,33 @@
     ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
 
 - shell:
-    - echo "🧰 Ensuring /opt/kitty is available and symlinked"
-    - '[ -f /usr/local/bin/kitty ] || sudo ln -sf /opt/kitty/bin/kitty /usr/local/bin/kitty'
+    - echo "🐱 Installing Kitty terminal to /opt"
+    - '[ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"'
+
+    - echo "🔗 Linking kitty to ~/.local/bin"
+    - mkdir -p ~/.local/bin
+    - ln -sf /opt/kitty/kitty.app/bin/kitty ~/.local/bin/kitty
+
+    - echo "📂 Ensuring ~/.local/share/applications exists"
+    - mkdir -p ~/.local/share/applications
+
     - echo "📦 Checking for Git"
-    - 'which git || (echo "Installing Git..." && sudo apt update && sudo apt install -y git)'
+    - 'which git || (echo "Installing Git..." && sudo apt install -y git)'
+
     - echo "📦 Installing CLI tools"
-    - sudo apt update
-    - sudo apt install -y git ripgrep fzf bat eza fd-find tldr
-    - echo "🔗 Fixing fd and bat symlinks"
+    - sudo apt install -y ripgrep fzf bat eza fd-find tldr
+
+    - echo "🔗 Creating fd and bat symlinks"
     - mkdir -p ~/bin
     - ln -sf $(which fdfind) ~/bin/fd
     - ln -sf $(which batcat) ~/bin/bat
+
     - echo "📦 Installing VSCodium"
-    - wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-        | gpg --dearmor \
-        | sudo tee /usr/share/keyrings/vscodium-archive-keyring.gpg > /dev/null
-    - echo "deb [signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main" \
-        | sudo tee /etc/apt/sources.list.d/vscodium.list
+    - 'wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/vscodium-archive-keyring.gpg > /dev/null'
+    - 'echo "deb [signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list'
     - sudo apt update
     - sudo apt install -y codium
-    - echo "🐱 Installing Kitty terminal"
-    - '[ ! -d /opt/kitty ] && curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty || echo "Kitty already installed in /opt/kitty"'
-    - echo "📂 Ensuring ~/.local/share/applications exists"
-    - mkdir -p ~/.local/share/applications
-    - ln -sf /opt/kitty/bin/kitty ~/.local/bin/kitty
 
+    - echo "📦 Installing Zsh"
+    - sudo apt install -y zsh
+    - echo "✅ Done installing core components"

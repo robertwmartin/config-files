@@ -2,19 +2,9 @@
     link:
       force: true
 
-- link:
-    ~/.config/kitty: .config/kitty
-    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
-    ~/bin/kitty-update.sh: bin/kitty-update.sh
-    ~/.zshrc: .zshrc
-    ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
-    ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
-    ~/.vimrc: .vimrc
-    ~/.zshrc: .zshrc
-    ~/.config/zsh: .config/zsh
-    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
-
 - shell:
+    - mkdir -p ~/bin
+
     - echo "🐱 Installing Kitty terminal to /opt"
     - '[ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"'
 
@@ -31,10 +21,7 @@
     - echo "📦 Installing CLI tools"
     - sudo apt install -y ripgrep fzf bat eza fd-find tldr
 
-    - echo "⚙️ Setting default shell to Zsh (if needed)"
-    - '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
-
-    - echo "🔗 Creating fd and bat symlinks"
+        - echo "🔗 Creating fd and bat symlinks"
     - mkdir -p ~/bin
     - ln -sf $(which fdfind) ~/bin/fd
     - ln -sf $(which batcat) ~/bin/bat
@@ -48,3 +35,14 @@
     - echo "📦 Installing Zsh"
     - sudo apt install -y zsh
     - echo "✅ Done installing core components"
+    - echo "⚙️ Setting default shell to Zsh (if needed)"
+    - '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
+    ~/bin/kitty-update.sh: bin/kitty-update.sh
+    ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
+    ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
+    ~/.vimrc: .vimrc
+    ~/.config/zsh: .config/zsh

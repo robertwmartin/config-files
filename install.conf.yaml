@@ -40,9 +40,20 @@
 
 - link:
     ~/.zshrc: .zshrc
-    ~/.local/share/applications/kitty.desktop: .local/share/applications/kitty.desktop
     ~/bin/kitty-update.sh: bin/kitty-update.sh
     ~/bin/OneDriveCloudMount.sh: bin/OneDriveCloudMount.sh
     ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
     ~/.vimrc: .vimrc
     ~/.config/zsh: .config/zsh
+
+- shell:
+    - description: "Symlink kitty.desktop after Kitty is installed"
+      command: |
+        mkdir -p ~/.local/share/applications
+        ln -sf ~/.config/kitty/kitty.desktop ~/.local/share/applications/kitty.desktop
+        touch ~/.local/share/applications 
+
+- shell:
+    - description: "Fix kitty.desktop launcher entry"
+      command: ~/config-files/bin/fix-kitty-desktop.sh
+

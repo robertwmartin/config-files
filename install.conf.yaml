@@ -31,6 +31,9 @@
     - echo "📦 Installing CLI tools"
     - sudo apt install -y ripgrep fzf bat eza fd-find tldr
 
+    - echo "⚙️ Setting default shell to Zsh (if needed)"
+    - '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
+
     - echo "🔗 Creating fd and bat symlinks"
     - mkdir -p ~/bin
     - ln -sf $(which fdfind) ~/bin/fd

@@ -51,6 +51,8 @@
     ~/.config/kitty/kitty.conf:
       path: .config/kitty/kitty.conf
       force: true
+    ~/.config/VSCodium/User/settings.json: .config/VSCodium/User/settings.json
+    ~/.config/VSCodium/User/keybindings.json: .config/VSCodium/User/keybindings.json
 
 - shell:
     - description: "Fix kitty.desktop launcher entry"

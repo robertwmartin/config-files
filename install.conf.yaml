@@ -47,13 +47,6 @@
     ~/.config/zsh: .config/zsh
 
 - shell:
-    - description: "Symlink kitty.desktop after Kitty is installed"
-      command: |
-        mkdir -p ~/.local/share/applications
-        ln -sf ~/.config/kitty/kitty.desktop ~/.local/share/applications/kitty.desktop
-        touch ~/.local/share/applications 
-
-- shell:
     - description: "Fix kitty.desktop launcher entry"
       command: ~/config-files/bin/fix-kitty-desktop.sh
 

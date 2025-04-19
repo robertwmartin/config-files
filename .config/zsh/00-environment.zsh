@@ -17,5 +17,7 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Make all typed input green
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#B48EAD'
+ZSH_HIGHLIGHT_STYLES[path]='none'  # Disable underline on file paths
 
+ZSH_HIGHLIGHT_STYLES[path]='fg=#88C0D0'  # Soft blue for paths
 

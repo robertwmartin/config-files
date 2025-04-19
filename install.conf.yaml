@@ -53,3 +53,8 @@
     - description: "Fix kitty.desktop launcher entry"
       command: ~/config-files/bin/fix-kitty-desktop.sh
 
+- shell:
+     - description: "Install Nord dircolors for terminal color consistency"
+       command: |
+         curl -fLo ~/.dircolors https://raw.githubusercontent.com/arcticicestudio/nord-dircolors/develop/src/dir_colors
+

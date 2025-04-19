@@ -1,0 +1,16 @@
+color:
+  theme: custom
+  when: always
+  ui: '38;5;245'
+  file: '38;5;245'
+  dir: '38;5;110'
+  symlink: '38;5;109'
+  executable: '1;38;5;108'
+  link: '38;5;109'
+  socket: '38;5;180'
+  special: '38;5;203'
+  device: '38;5;217'
+  pipe: '38;5;180'
+  block: '38;5;180'
+  char: '38;5;180'
+

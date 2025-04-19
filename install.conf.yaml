@@ -53,3 +53,7 @@
     - description: "Fix kitty.desktop launcher entry"
       command: ~/config-files/bin/fix-kitty-desktop.sh
 
+- shell:
+    - description: "Install lsd (Nord-themed ls replacement)"
+      command: sudo apt install -y lsd
+

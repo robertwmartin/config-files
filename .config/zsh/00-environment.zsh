@@ -16,5 +16,6 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Make all typed input green
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main)
-ZSH_HIGHLIGHT_STYLES[default]='fg=green'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#B48EAD'
+
 

@@ -1,0 +1,14 @@
+arcticicestudio.nord-visual-studio-code
+christian-kohler.path-intellisense
+codeium.codeium
+dbaeumer.vscode-eslint
+editorconfig.editorconfig
+esbenp.prettier-vscode
+ms-python.debugpy
+ms-python.pylint
+ms-python.python
+ms-vscode.vscode-typescript-next
+redhat.vscode-yaml
+timonwong.shellcheck
+vscodevim.vim
+yzhang.markdown-all-in-one

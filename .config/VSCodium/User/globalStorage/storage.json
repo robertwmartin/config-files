@@ -1,0 +1,63 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "6d97dabc7a9447c53b10458fb671decf3d912e224393df80ddd5b5ea3fa8c219",
+    "telemetry.devDeviceId": "2991c983-f902-4947-88f4-2ee9d021697d",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": [
+            {
+                "backupFolder": "1745094198520"
+            }
+        ]
+    },
+    "windowControlHeight": 35,
+    "profileAssociations": {
+        "workspaces": {},
+        "emptyWindows": {
+            "1745094198520": "__default__profile__"
+        }
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#2e3440",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#d8dee9",
+            "background": "#2e3440",
+            "editorBackground": "#2e3440",
+            "titleBarBackground": "#2e3440",
+            "titleBarBorder": "rgba(46, 52, 64, 0)",
+            "activityBarBackground": "#2e3440",
+            "sideBarBackground": "#2e3440",
+            "sideBarBorder": "#3b4252",
+            "statusBarBackground": "#3b4252",
+            "statusBarBorder": "rgba(59, 66, 82, 0)",
+            "statusBarNoFolderBackground": "#3b4252"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 35,
+            "activityBarWidth": 48,
+            "sideBarWidth": 300,
+            "auxiliarySideBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "/home/rmartin/.config/VSCodium/Backups/1745094198520",
+            "uiState": {
+                "mode": 1,
+                "x": 2331,
+                "y": 193,
+                "width": 1200,
+                "height": 800
+            }
+        },
+        "openedWindows": []
+    }
+}

@@ -32,7 +32,10 @@ else
   echo "📂 config-files already exists"
 fi
 
-# Step 3: Run the installer
+# Step 3: Initialize git submodules
+git submodule update --init --recursive
+
+# Step 4: Run the installer
 cd "$HOME/config-files"
 echo "⚙️ Running Dotbot installer"
 ./install.sh

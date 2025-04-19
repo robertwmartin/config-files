@@ -18,6 +18,9 @@
     - echo "📦 Checking for Git"
     - 'which git || (echo "Installing Git..." && sudo apt install -y git)'
 
+    - description: "Install full Vim editor"
+      command: sudo apt install -y vim
+
     - echo "📦 Installing CLI tools"
     - sudo apt install -y ripgrep fzf bat eza fd-find tldr
 

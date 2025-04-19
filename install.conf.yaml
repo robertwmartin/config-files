@@ -48,6 +48,9 @@
     ~/.local/share/applications/OneDriveCloudMount.desktop: .local/share/applications/OneDriveCloudMount.desktop
     ~/.vimrc: .vimrc
     ~/.config/zsh: .config/zsh
+    ~/.config/kitty/kitty.conf:
+      path: .config/kitty/kitty.conf
+      force: true
 
 - shell:
     - description: "Fix kitty.desktop launcher entry"

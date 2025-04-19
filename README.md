@@ -26,3 +26,14 @@ remote_control socket=/tmp/kitty.sock
 
 Without this, commands like kitty @ set-colors will not work.
 
+Kitty keyboard shortcuts
+
+These keybindings are defined in kitty.conf:
+Shortcut	Action
+Ctrl+Shift+T	Open a new tab
+Ctrl+Shift+W	Close the current tab
+Ctrl+Shift+Right	Switch to next tab
+Ctrl+Shift+Left	Switch to previous tab
+Ctrl+Shift+N	Launch a new independent Kitty window
+
+    The Ctrl+Shift+N shortcut uses launch --detach to open a separate Kitty instance on another monitor or workspace.

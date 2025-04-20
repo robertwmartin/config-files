@@ -80,7 +80,7 @@
     - description: "Install Zsh and set $SHELL to be zsh"
       command: | 
         sudo apt install -y zsh
-        '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
+        [ "$SHELL" != "$(which zsh)" ] && chsh -s $(command -v zsh) || echo "Shell already set to Zsh"
 
 # ────── Ensure kitty is launchable from the GUI ─────
 - shell:

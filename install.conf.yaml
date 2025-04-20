@@ -2,45 +2,101 @@
     link:
       force: true
 
+# ────── Put any potentially repeated directory commands here ──────
 - shell:
-    - mkdir -p ~/bin
+    - echo "────────────────────────────────────"
+    - echo " Creating common directories        "
+    - echo "────────────────────────────────────"
+    - description: "Create common directories"
+      command: |
+        mkdir -p ~/bin
+        mkdir -p ~/.local/bin
+        mkdir -p ~/.local/share/applications
+        mkdir -p ~/.config
 
+
+# ────── 🐱 Kitty Terminal Setup ──────
+- shell:
+    - echo "────────────────────────────────────"
     - echo "🐱 Installing Kitty terminal to /opt"
-    - '[ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"'
+    - echo "────────────────────────────────────"
+    - description: "Install Kitty terminal to /opt and create required symlink to ~/.local/bin"
+      command: |
+        '[ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"'
+        ln -sf /opt/kitty/kitty.app/bin/kitty ~/.local/bin/kitty
 
-    - echo "🔗 Linking kitty to ~/.local/bin"
-    - mkdir -p ~/.local/bin
-    - ln -sf /opt/kitty/kitty.app/bin/kitty ~/.local/bin/kitty
+# ────── Git should be installed but just in case as it is essential ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Checking for Git                 "
+    - echo "────────────────────────────────────"
+    - description: "Installing git if it does not exist via sudo apt"
+      command: 'which git || (echo "Installing Git..." && sudo apt install -y git)'
 
-    - echo "📂 Ensuring ~/.local/share/applications exists"
-    - mkdir -p ~/.local/share/applications
-
-    - echo "📦 Checking for Git"
-    - 'which git || (echo "Installing Git..." && sudo apt install -y git)'
-
+# ────── Install full Vim since Ubuntu 24.04 only installs tiny vim  ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo " Install full Vim editor            "
+    - echo "────────────────────────────────────"
     - description: "Install full Vim editor"
       command: sudo apt install -y vim
 
-    - echo "📦 Installing CLI tools"
-    - sudo apt install -y ripgrep fzf bat eza fd-find tldr
 
-    - echo "🔗 Creating fd and bat symlinks"
-    - mkdir -p ~/bin
-    - ln -sf $(which fdfind) ~/bin/fd
-    - ln -sf $(which batcat) ~/bin/bat
+# ────── Install useful CLI developer tools that don't come with Ubuntu 24.04  ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Installing CLI tools             "
+    - echo "────────────────────────────────────"
+    - description: "Install useful CLI tools that don't come with Ubuntu 24.04 - ripgrep fzf bat fd-find tldr"
+      command: sudo apt install -y ripgrep fzf bat fd-find tldr lsd
 
-    - echo "📦 Installing VSCodium"
-    - 'wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/vscodium-archive-keyring.gpg > /dev/null'
-    - 'echo "deb [signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list'
-    - sudo apt update
-    - sudo apt install -y codium
+# ────── Both fd and bat require specifc symlinks ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "🔗 Creating fd and bat symlinks     "
+    - echo "────────────────────────────────────"
+    - description: "Both fd and bat require specific symlinks"
+      command: |
+       ln -sf $(which fdfind) ~/bin/fd
+       ln -sf $(which batcat) ~/bin/bat
 
-    - echo "📦 Installing Zsh"
-    - sudo apt install -y zsh
-    - echo "✅ Done installing core components"
-    - echo "⚙️ Setting default shell to Zsh (if needed)"
-    - '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
+# ────── Install VSCodium to get the benefits of VS Code without the telemetry ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Installing VSCodium              "
+    - echo "────────────────────────────────────"
+    - description: "Add VSCodium repo and install via APT"
+      command: |
+        wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/vscodium-archive-keyring.gpg > /dev/null
+        echo "deb [signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main" | sudo tee /etc/apt/sources.list.d/vscodium.list
+        sudo apt update
+        sudo apt install -y codium
 
+# ────── Install Zsh and make sure it is the default shell for the installer ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Installing Zsh                   "
+    - echo "────────────────────────────────────"
+    - description: "Install Zsh and set $SHELL to be zsh"
+      command: | 
+        sudo apt install -y zsh
+        '[ "$SHELL" != "$(which zsh)" ] && chsh -s $(which zsh) || echo "Shell already set to Zsh"'
+
+# ────── Ensure kitty is launchable from the GUI ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo " Confirm kitty.desktop is installed "
+    - echo "────────────────────────────────────"
+    - description: "Fix kitty.desktop launcher entry"
+      command: ~/config-files/bin/fix-kitty-desktop.sh
+
+# ────── No more commands to install ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo " ✅ Done installing core components "
+    - echo "────────────────────────────────────"
+
+# ────── Create any remaining required symlinks ─────
 - link:
     ~/.zshrc: .zshrc
     ~/bin/kitty-update.sh: bin/kitty-update.sh
@@ -53,12 +109,4 @@
       force: true
     ~/.config/VSCodium/User/settings.json: .config/VSCodium/User/settings.json
     ~/.config/VSCodium/User/keybindings.json: .config/VSCodium/User/keybindings.json
-
-- shell:
-    - description: "Fix kitty.desktop launcher entry"
-      command: ~/config-files/bin/fix-kitty-desktop.sh
-
-- shell:
-    - description: "Install lsd (Nord-themed ls replacement)"
-      command: sudo apt install -y lsd
 

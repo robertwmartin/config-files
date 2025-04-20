@@ -7,13 +7,14 @@
     - echo "────────────────────────────────────"
     - echo " Creating common directories        "
     - echo "────────────────────────────────────"
-    - description: "Create common directories"
+    - description: "Create common directories now so that symlinks created below don't fail"
       command: |
         mkdir -p ~/bin
         mkdir -p ~/.local/bin
         mkdir -p ~/.local/share/applications
         mkdir -p ~/.config
         mkdir -p ~/.config/VSCodium/User
+        mkdir -p ~/.config/kitty
 
 
 # ────── 🐱 Kitty Terminal Setup ──────

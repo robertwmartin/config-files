@@ -1,5 +1,22 @@
 #!/bin/bash
 
+DESKTOP_SYMLINK="$HOME/.local/share/applications/kitty.desktop"
+SOURCE_FILE="$HOME/.config/kitty/kitty.conf"
+
+# Exit early if the source file doesn't exist
+if [ ! -f "$SOURCE_FILE" ] && [ ! -L "$SOURCE_FILE" ]; then
+  echo "⚠️ Kitty config not found: $SOURCE_FILE"
+  echo "Skipping fix-kitty-desktop.sh"
+  exit 0
+fi
+
+# Exit early if the symlink is broken or doesn't exist
+if [ ! -L "$DESKTOP_SYMLINK" ]; then
+  echo "⚠️ Kitty .desktop symlink not found or not a symlink: $DESKTOP_SYMLINK"
+  echo "Skipping fix-kitty-desktop.sh"
+  exit 0
+fi
+
 set -e
 
 TARGET="$HOME/.local/share/applications/kitty.desktop"

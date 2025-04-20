@@ -13,6 +13,7 @@
         mkdir -p ~/.local/bin
         mkdir -p ~/.local/share/applications
         mkdir -p ~/.config
+        mkdir -p ~/.config/VSCodium/User
 
 
 # ────── 🐱 Kitty Terminal Setup ──────

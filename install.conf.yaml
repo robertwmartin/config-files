@@ -82,6 +82,15 @@
     - description: "Add VSCodium extensions listed in vscodium-extensions.txt in repo"
       command: ~/config-files/bin/install-vscodium-extensions.sh
 
+# ────── 📦 Dev tools and runtimes ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Installing dev tools & runtimes "
+    - echo "────────────────────────────────────"
+    - description: "Install Node.js, npm, Python tools, and CopyQ"
+      command: |
+        sudo apt install -y python3-pip python3-yaml copyq nodejs npm
+
 # ────── Install Zsh and make sure it is the default shell for the installer ─────
 - shell:
     - echo "────────────────────────────────────"

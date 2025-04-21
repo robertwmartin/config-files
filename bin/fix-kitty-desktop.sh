@@ -1,46 +1,38 @@
 #!/bin/bash
-
-DESKTOP_SYMLINK="$HOME/.local/share/applications/kitty.desktop"
-SOURCE_FILE="$HOME/.config/kitty/kitty.conf"
-
-# Exit early if the source file doesn't exist
-if [ ! -f "$SOURCE_FILE" ] && [ ! -L "$SOURCE_FILE" ]; then
-  echo "⚠️ Kitty config not found: $SOURCE_FILE"
-  echo "Skipping fix-kitty-desktop.sh"
-  exit 0
-fi
-
-# Exit early if the symlink is broken or doesn't exist
-if [ ! -L "$DESKTOP_SYMLINK" ]; then
-  echo "⚠️ Kitty .desktop symlink not found or not a symlink: $DESKTOP_SYMLINK"
-  echo "Skipping fix-kitty-desktop.sh"
-  exit 0
-fi
-
-set -e
+set -euo pipefail
 
 TARGET="$HOME/.local/share/applications/kitty.desktop"
+KITTY_DIR="/opt/kitty/kitty.app"
+KITTY_EXEC="$KITTY_DIR/bin/kitty"
+KITTY_ICON="$KITTY_DIR/share/icons/hicolor/256x256/apps/kitty.png"
+SOURCE_DESKTOP="$KITTY_DIR/share/applications/kitty.desktop"
 
-# Remove broken symlink if it exists
-if [ -L "$TARGET" ] && [ ! -e "$TARGET" ]; then
-  echo "Removing dangling symlink: $TARGET"
-  rm "$TARGET"
+# Exit early if Kitty isn't installed
+if [ ! -x "$KITTY_EXEC" ]; then
+  echo "❌ Kitty not found at $KITTY_EXEC"
+  exit 1
 fi
 
 # Ensure applications directory exists
-mkdir -p "$HOME/.local/share/applications"
+mkdir -p "$(dirname "$TARGET")"
 
-# Copy the desktop entry from the installed kitty.app bundle
-cp /opt/kitty/kitty.app/share/applications/kitty.desktop "$TARGET"
+# Remove existing .desktop file or symlink
+if [ -e "$TARGET" ] || [ -L "$TARGET" ]; then
+  echo "🧹 Removing old $TARGET"
+  rm -f "$TARGET"
+fi
 
-# Fix Exec path
-sed -i "s|Exec=kitty|Exec=/opt/kitty/kitty.app/bin/kitty|g" "$TARGET"
+# Copy and patch the .desktop file
+echo "📋 Copying launcher from $SOURCE_DESKTOP"
+cp "$SOURCE_DESKTOP" "$TARGET"
 
-# Fix Icon path
-sed -i "s|Icon=kitty|Icon=/opt/kitty/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" "$TARGET"
+echo "🛠️  Patching Exec and Icon paths"
+sed -i "s|Exec=kitty|Exec=$KITTY_EXEC|g" "$TARGET"
+sed -i "s|Icon=kitty|Icon=$KITTY_ICON|g" "$TARGET"
 
-# Update desktop database
-update-desktop-database "$HOME/.local/share/applications"
+# Refresh launcher database
+echo "🔄 Updating desktop database"
+update-desktop-database "$(dirname "$TARGET")"
 
-echo "✅ kitty.desktop fixed and ready"
+echo "✅ Kitty launcher installed and updated: $TARGET"
 

@@ -99,6 +99,19 @@
     - description: "Install Zsh" 
       command: sudo apt install -y zsh
 
+# ────── Install Brave Browser and related key ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "🦁 Installing Brave Browser         "
+    - echo "────────────────────────────────────"
+    - description: "Add Brave APT repo and install via apt"
+      command: |
+        sudo apt install -y curl
+        sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave.com/static-assets/images/brave-browser-archive-keyring.gpg
+        echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+        sudo apt update
+        sudo apt install -y brave-browser
+
 # ────── Ensure kitty is launchable from the GUI ─────
 - shell:
     - echo "────────────────────────────────────"
@@ -106,6 +119,22 @@
     - echo "────────────────────────────────────"
     - description: "Fix kitty.desktop launcher entry"
       command: ~/config-files/bin/fix-kitty-desktop.sh
+
+# ────── Install Brave browser (privacy-friendly Chromium alternative) ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo "📦 Installing Brave Browser         "
+    - echo "────────────────────────────────────"
+    - description: "Add Brave repo and install browser via APT"
+      command: |
+        sudo apt install -y curl gnupg
+        sudo mkdir -p /etc/apt/keyrings
+        curl -fsSL https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg \
+          | sudo tee /etc/apt/keyrings/brave-browser-archive-keyring.gpg > /dev/null
+        echo "deb [signed-by=/etc/apt/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
+          | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+        sudo apt update
+        sudo apt install -y brave-browser
 
 # ────── No more commands to install ─────
 - shell:

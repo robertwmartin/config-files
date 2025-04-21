@@ -3,7 +3,7 @@ set -euo pipefail
 
 KITTY_REPO="kovidgoyal/kitty"
 INSTALL_DIR="/opt/kitty"
-BIN_PATH="$INSTALL_DIR/bin/kitty"
+BIN_PATH="$INSTALL_DIR/kitty.app/bin/kitty"
 TMP_DIR="/tmp/kitty-update"
 ARCHIVE_NAME="kitty.app.tar.xz"
 

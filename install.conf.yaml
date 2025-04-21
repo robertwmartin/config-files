@@ -24,7 +24,7 @@
     - echo "────────────────────────────────────"
     - description: "Install Kitty terminal to /opt and create required symlink to ~/.local/bin"
       command: |
-        '[ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"'
+        [ -d /opt/kitty ] || sudo sh -c "curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/opt/kitty"
         ln -sf /opt/kitty/kitty.app/bin/kitty ~/.local/bin/kitty
 
 # ────── Git should be installed but just in case as it is essential ─────

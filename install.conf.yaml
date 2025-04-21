@@ -80,7 +80,7 @@
     - echo "📦 Installing VSCodium extensions   "
     - echo "────────────────────────────────────"
     - description: "Add VSCodium extensions listed in vscodium-extensions.txt in repo"
-    - command: ~/config-files/bin/install-vscodium-extensions.sh
+      command: ~/config-files/bin/install-vscodium-extensions.sh
 
 # ────── Install Zsh and make sure it is the default shell for the installer ─────
 - shell:

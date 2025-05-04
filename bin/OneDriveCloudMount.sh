@@ -13,7 +13,7 @@ if mount | grep "$MOUNT_POINT" > /dev/null; then
 fi
 
 # Attempt mount
-rclone mount onedrive: "$MOUNT_POINT" --vfs-cache-mode writes --daemon
+rclone mount onedrive: "$MOUNT_POINT" --vfs-cache-mode writes 
 
 # Check success
 if mount | grep "$MOUNT_POINT" > /dev/null; then

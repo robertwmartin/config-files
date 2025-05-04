@@ -1,12 +1,14 @@
 [Unit]
 Description=Mount OneDrive using rclone
-After=network-online.target
-Wants=network-online.target
+After=graphical-session.target
+Requires=graphical-session.target
 
 [Service]
-Type=oneshot
-ExecStart=%h/config-files/bin/OneDriveCloudMount.sh
-RemainAfterExit=true
+Type=simple
+ExecStartPre=/bin/sleep 5
+ExecStartPre=/bin/bash -c '/bin/fusermount -u /home/rmartin/OneDriveCloudMount || true'
+ExecStart=/home/rmartin/config-files/bin/OneDriveCloudMount.sh
+Restart=on-failure
 
 [Install]
 WantedBy=default.target

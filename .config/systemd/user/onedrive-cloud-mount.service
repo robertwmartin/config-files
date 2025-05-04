@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount OneDrive using rclone
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/config-files/bin/OneDriveCloudMount.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
+

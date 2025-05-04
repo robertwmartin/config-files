@@ -1,6 +1,10 @@
 # Mounting OneDrive with rclone
 
-This guide documents the manual setup and mounting process for accessing Microsoft OneDrive using `rclone`. This script is **not included** in the automated `install.conf.yaml` install process, but is tracked here for reference and future automation if desired.
+This guide documents the setup and mounting process for accessing Microsoft OneDrive using `rclone`. This includes both the manual script and the automated `systemd` user service that runs the mount at login.
+
+> 🔧 This is **not part of the Dotbot install process** by default, but configuration and symlinks are stored in the repo.
+
+---
 
 ## Prerequisites
 
@@ -13,6 +17,8 @@ sudo apt install rclone
 ```bash
 sudo apt install fuse
 ```
+
+---
 
 ## Configure rclone for OneDrive
 
@@ -29,7 +35,9 @@ rclone config
 rclone lsd onedrive:
 ```
 
-## Verify and Use the Mount Script
+---
+
+## OneDrive Mount Script
 
 ### File: `~/config-files/bin/OneDriveCloudMount.sh`
 ```bash
@@ -53,8 +61,11 @@ else
 fi
 ```
 
-### Step 1: Ensure FUSE allows non-root mounting
-Edit `/etc/fuse.conf`:
+---
+
+## FUSE: Allow user mounts
+
+Ensure the following is set in `/etc/fuse.conf`:
 ```bash
 sudo nano /etc/fuse.conf
 ```
@@ -63,25 +74,55 @@ Uncomment or add:
 user_allow_other
 ```
 
-### Step 2: Run the script manually
-```bash
-bash ~/config-files/bin/OneDriveCloudMount.sh
+---
+
+## Automate with systemd
+
+### Service file: `~/.config/systemd/user/onedrive-cloud-mount.service`
+Source: `~/config-files/.config/systemd/user/onedrive-cloud-mount.service`
+```ini
+[Unit]
+Description=Mount OneDrive using rclone
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/config-files/bin/OneDriveCloudMount.sh
+RemainAfterExit=true
+
+[Install]
+WantedBy=default.target
 ```
 
-### Step 3: Troubleshooting
-If mount fails:
+### Enable the service:
+```bash
+systemctl --user daemon-reload
+systemctl --user enable onedrive-cloud-mount.service
+systemctl --user start onedrive-cloud-mount.service
+```
+
+### Allow user-level services to persist
+```bash
+sudo loginctl enable-linger $USER
+```
+
+---
+
+## Troubleshooting
+
+If the mount fails:
 ```bash
 fusermount -u ~/OneDrive   # or
 sudo umount ~/OneDrive
 ```
-Then retry the mount.
 
-You can also run interactively to see logs:
+Run the script manually to debug:
 ```bash
-rclone mount onedrive: ~/OneDrive --vfs-cache-mode writes
+bash ~/config-files/bin/OneDriveCloudMount.sh
 ```
 
-Or with logging:
+Or run with log output:
 ```bash
 rclone mount onedrive: ~/OneDrive \
   --vfs-cache-mode writes \
@@ -91,16 +132,9 @@ rclone mount onedrive: ~/OneDrive \
 
 ---
 
-## Future Considerations
-- Create a systemd service for persistent mount across reboots
-- Use `nohup` instead of `--daemon` if the script proves unreliable
-- Store credentials securely if config is shared across systems
+## Summary
 
----
-
-## Notes
-- This process does not run automatically during install.
-- Script location: `~/config-files/bin/OneDriveCloudMount.sh`
-- Mount target: `~/OneDrive`
-
-
+- ✅ Manual mount script: `~/config-files/bin/OneDriveCloudMount.sh`
+- ✅ Auto-mount at login via `systemd --user`
+- ✅ Symlink to service file managed by Dotbot
+- ❌ Not enabled automatically during base install

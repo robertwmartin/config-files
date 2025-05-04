@@ -155,6 +155,9 @@
       force: true
     ~/.config/VSCodium/User/settings.json: .config/VSCodium/User/settings.json
     ~/.config/VSCodium/User/keybindings.json: .config/VSCodium/User/keybindings.json
+    ~/.config/systemd/user/onedrive-cloud-mount.service: .config/systemd/user/onedrive-cloud-mount.service
+    ~/.local/share/applications/todoist.desktop: .local/share/applications/todoist.desktop
+    ~/.local/share/icons/todoist.png: icons/todoist.png
 
 # ────── Display notification to run chsh command ─────
 - shell:

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Todoist
+Exec=brave-browser --app=https://todoist.com
+Icon=todoist
+Terminal=false
+Type=Application
+Categories=Productivity;
+StartupWMClass=brave

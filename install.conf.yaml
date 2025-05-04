@@ -136,6 +136,14 @@
         sudo apt update
         sudo apt install -y brave-browser
 
+# ────── Set keybindings to match Windows 11 experience  ─────
+- shell:
+    - echo "────────────────────────────────────"
+    - echo " Set keybindings                    "
+    - echo "────────────────────────────────────"
+    - description: "Set keybindings to match Windows 11 experience"
+      command: ./bin/set-keybindings.sh
+
 # ────── No more commands to install ─────
 - shell:
     - echo "────────────────────────────────────"

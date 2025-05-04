@@ -1,3 +1,5 @@
 {
-    "workbench.colorTheme": "Nord"
+    "workbench.colorTheme": "Nord",
+    "redhat.telemetry.enabled": true,
+    "git.autofetch": true
 }

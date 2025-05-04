@@ -167,6 +167,8 @@
     ~/.local/share/applications/todoist.desktop: .local/share/applications/todoist.desktop
     ~/.local/share/icons/todoist.png: icons/todoist.png
     ~/.config/copyq: .config/copyq
+    ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks: .config/BraveSoftware/Brave-Browser/Default/Bookmarks
+    ~/.config/BraveSoftware/Brave-Browser/Default/Preferences: .config/BraveSoftware/Brave-Browser/Default/Preferences
 
 # ────── Display notification to run chsh command ─────
 - shell:

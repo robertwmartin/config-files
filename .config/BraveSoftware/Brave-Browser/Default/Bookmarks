@@ -1,0 +1,257 @@
+{
+   "checksum": "23f65cebacd38fa2b286c3bbeae7998e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "children": [ {
+               "date_added": "13301184359000000",
+               "date_last_used": "0",
+               "guid": "6fefb6ee-9380-4e25-a3be-f5d591e76e66",
+               "id": "17",
+               "name": "Forge - Asset Library",
+               "type": "url",
+               "url": "https://forge-vtt.com/assets/browse"
+            }, {
+               "date_added": "13269323405000000",
+               "date_last_used": "0",
+               "guid": "c1718ff3-8683-4221-abe1-d03bb2a78802",
+               "id": "18",
+               "name": "Forge - Games",
+               "type": "url",
+               "url": "https://forge-vtt.com/games"
+            }, {
+               "date_added": "13300479296000000",
+               "date_last_used": "0",
+               "guid": "f8dd700b-fbee-45be-a042-4074a7bc17e5",
+               "id": "19",
+               "name": "Forge - Module Updates",
+               "type": "url",
+               "url": "https://forge-vtt.com/bazaar"
+            }, {
+               "date_added": "13339272036000000",
+               "date_last_used": "0",
+               "guid": "19c6db8b-aa0e-49f8-87e1-49ad30e820c5",
+               "id": "20",
+               "name": "Join - Dadairm",
+               "type": "url",
+               "url": "https://robertwmartin-dadairm.forge-vtt.com/"
+            }, {
+               "date_added": "13374122045000000",
+               "date_last_used": "0",
+               "guid": "d120e01d-54db-4e03-80db-749cec71a036",
+               "id": "21",
+               "name": "Join - Drakkenheim",
+               "type": "url",
+               "url": "https://robertwmartin-drakkenheim.forge-vtt.com/"
+            }, {
+               "date_added": "13319079964000000",
+               "date_last_used": "13390697588963784",
+               "guid": "e718f81f-8363-4b7d-bae9-fb5f6eb28a89",
+               "id": "22",
+               "name": "Join - Dev Server 5e",
+               "type": "url",
+               "url": "https://robertwmartin-dev-5e-v4x.forge-vtt.com/"
+            }, {
+               "date_added": "13303016046000000",
+               "date_last_used": "0",
+               "guid": "902fc519-4be1-462d-b551-0a7a94e2164b",
+               "id": "23",
+               "name": "Join - Seeing Tower",
+               "type": "url",
+               "url": "https://robertwmartin-seeing-tower.forge-vtt.com/"
+            }, {
+               "date_added": "13336508421000000",
+               "date_last_used": "0",
+               "guid": "4640dbdf-7c70-41af-840d-bd8c2a63d219",
+               "id": "24",
+               "name": "Join - The Usley Diaires",
+               "type": "url",
+               "url": "https://robertwmartin-usley.forge-vtt.com/game"
+            }, {
+               "date_added": "13269019196000000",
+               "date_last_used": "0",
+               "guid": "2d1b61f1-fa0c-4298-8ff7-2cadb0c4fed6",
+               "id": "25",
+               "name": "Forgotten Realms Wiki",
+               "type": "url",
+               "url": "https://forgottenrealms.fandom.com/wiki/Main_Page"
+            }, {
+               "date_added": "13303962187000000",
+               "date_last_used": "0",
+               "guid": "081d16bf-3b0e-4586-a7ec-efe20f0191ee",
+               "id": "26",
+               "name": "Faerun Interactive Map",
+               "type": "url",
+               "url": "https://www.aidedd.org/atlas/index.php?map=R&l=1"
+            }, {
+               "date_added": "13321421501000000",
+               "date_last_used": "0",
+               "guid": "1930ea69-bda8-4d9c-9e6f-d52a65cc609e",
+               "id": "27",
+               "name": "Encounter Calculator",
+               "type": "url",
+               "url": "https://kastark.co.uk/rpgs/encounter-calculator-5th/"
+            }, {
+               "date_added": "13340399307000000",
+               "date_last_used": "0",
+               "guid": "4abb4771-7326-4bef-8460-ee1dfb758228",
+               "id": "28",
+               "name": "Sesh",
+               "type": "url",
+               "url": "https://sesh.fyi/dashboard/"
+            } ],
+            "date_added": "13390670138265273",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "963df89c-0bb4-43f3-aedc-34c830145da0",
+            "id": "16",
+            "name": "Energam",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13293669034000000",
+               "date_last_used": "0",
+               "guid": "a0a7b2e3-cf5a-46d2-a95b-206337c048fd",
+               "id": "14",
+               "name": "Slack",
+               "type": "url",
+               "url": "https://app.slack.com/client/TCTLB88P5/C01B8TELCDQ"
+            }, {
+               "date_added": "13321139036000000",
+               "date_last_used": "0",
+               "guid": "21a1c7d5-4090-4ca5-ae97-0679b72f4caf",
+               "id": "15",
+               "name": "All Published Standards - Digital Governance Council",
+               "type": "url",
+               "url": "https://dgc-cgn.org/standards/all-published/"
+            } ],
+            "date_added": "13390670138265238",
+            "date_last_used": "0",
+            "date_modified": "0",
+            "guid": "3f3a72e9-bdeb-4477-a62d-dd5e33e29463",
+            "id": "13",
+            "name": "Digital Governance Council",
+            "type": "folder"
+         }, {
+            "date_added": "13390540664345540",
+            "date_last_used": "0",
+            "guid": "bdbe59ae-c590-4d2d-a21b-15deb65604b8",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "The Thieves Guild",
+            "type": "url",
+            "url": "https://www.thievesguild.cc/"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "0",
+            "guid": "2f645dd3-ad76-4252-99c5-4502de4bf0e3",
+            "id": "38",
+            "name": "Home | Patreon",
+            "type": "url",
+            "url": "https://www.patreon.com/home"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "0",
+            "guid": "b167b80d-2094-4fbf-984c-257088b79c26",
+            "id": "36",
+            "name": "Home",
+            "type": "url",
+            "url": "https://3.basecamp.com/5923931/"
+         }, {
+            "date_added": "13256337166000000",
+            "date_last_used": "0",
+            "guid": "10f75e3e-fa28-4f4a-ac1e-17061efafb20",
+            "id": "9",
+            "name": "Programmes et émissions de la radio, à écouter en ligne et en podcasts - Fip",
+            "type": "url",
+            "url": "https://www.fip.fr/emissions"
+         }, {
+            "date_added": "13342466081000000",
+            "date_last_used": "0",
+            "guid": "42613b52-e5c4-4fcc-af69-22a85ba069b4",
+            "id": "10",
+            "name": "Libby",
+            "type": "url",
+            "url": "https://libbyapp.com/shelf"
+         }, {
+            "date_added": "13324965985000000",
+            "date_last_used": "0",
+            "guid": "ed620b29-ea82-4627-a5ff-4e310b3b8631",
+            "id": "11",
+            "name": "LibraryThing",
+            "type": "url",
+            "url": "https://www.librarything.com/home"
+         }, {
+            "date_added": "13342466101000000",
+            "date_last_used": "0",
+            "guid": "15eced4b-a564-4413-88a9-dd43648506e6",
+            "id": "12",
+            "name": "EPL",
+            "type": "url",
+            "url": "https://www.epl.ca/"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "0",
+            "guid": "142e37a7-9664-42b6-bca7-36fa13a5ea53",
+            "id": "33",
+            "name": "Wikipedia, the free encyclopedia",
+            "type": "url",
+            "url": "https://en.wikipedia.org/wiki/Main_Page"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "0",
+            "guid": "8e99dfe9-a4c2-4744-b677-8c77cddee39b",
+            "id": "37",
+            "name": "LunaPic | Free Online Photo Editor - Edit, Adjust & Create",
+            "type": "url",
+            "url": "https://www5.lunapic.com/editor/"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "13390692517217616",
+            "guid": "86d00398-57f7-487f-a15b-9c2def3e46cf",
+            "id": "34",
+            "name": "gmap-pedometer.com",
+            "type": "url",
+            "url": "https://gmap-pedometer.com/"
+         }, {
+            "date_added": "13390690895000000",
+            "date_last_used": "0",
+            "guid": "895e9ac8-7d5c-4175-9fcc-8eda3f6b2389",
+            "id": "35",
+            "name": "Bird Academy | The Cornell Lab | Courses Tutorials Videos",
+            "type": "url",
+            "url": "https://academy.allaboutbirds.org/"
+         } ],
+         "date_added": "13390534483098181",
+         "date_last_used": "0",
+         "date_modified": "13390865891443717",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13390534483098183",
+         "date_last_used": "0",
+         "date_modified": "13390540664345540",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13390534483098184",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

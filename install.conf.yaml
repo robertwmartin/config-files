@@ -166,6 +166,7 @@
     ~/.config/systemd/user/onedrive-cloud-mount.service: .config/systemd/user/onedrive-cloud-mount.service
     ~/.local/share/applications/todoist.desktop: .local/share/applications/todoist.desktop
     ~/.local/share/icons/todoist.png: icons/todoist.png
+    ~/.config/copyq: .config/copyq
 
 # ────── Display notification to run chsh command ─────
 - shell:

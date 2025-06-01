@@ -79,8 +79,6 @@ The `Extensions/` directory is **not** tracked. This is intentional:
 - Bookmarks were imported from the user's Windows installation and can be updated later.
 - Extensions can be reinstalled manually or through Brave's sync feature if needed.
 
-
-
 --- 
 
 ## ## Tags

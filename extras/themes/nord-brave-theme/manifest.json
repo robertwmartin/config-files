@@ -1,0 +1,18 @@
+{
+"manifest_version": 2,
+  "name": "Nord Brave Theme",
+  "version": "1.0",
+  "description": "A dark theme for Brave using the Nord color palette.",
+  "theme": {
+    "colors": {
+      "frame": [46, 52, 64],
+      "toolbar": [59, 66, 82],
+      "tab_text": [216, 222, 233],
+      "tab_background_text": [136, 192, 208],
+      "bookmark_text": [229, 233, 240],
+      "ntp_background": [46, 52, 64],
+      "ntp_text": [216, 222, 233],
+      "button_background": [180, 142, 173]
+    }
+  }
+}

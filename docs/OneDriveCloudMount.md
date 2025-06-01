@@ -7,11 +7,13 @@ This guide documents the setup used to automatically mount OneDrive at login usi
 ## Overview
 
 OneDrive is mounted using `rclone` to a local folder:
+
 ```
 ~/OneDriveCloudMount
 ```
 
 This setup uses:
+
 - A custom shell script
 - A user systemd service
 - Dotbot integration
@@ -101,8 +103,11 @@ Add to `install.conf.yaml`:
 ## Final Notes
 
 - The mount will be available automatically after login.
+
 - You’ll see a desktop notification if it succeeds or fails.
+
 - If debugging is ever needed:
+  
   ```bash
   journalctl --user -u onedrive-cloud-mount.service
   ```

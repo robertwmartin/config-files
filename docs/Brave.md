@@ -7,15 +7,18 @@ This guide documents how to track and restore Brave browser settings as part of 
 ## Overview
 
 Brave settings are stored in the Chromium-style directory:
+
 ```
 ~/.config/BraveSoftware/Brave-Browser/Default/
 ```
 
-For a portable setup, we track:
+For a portable setup, I **include**:
+
 - `Bookmarks`: All user-created bookmarks
 - `Preferences`: General browser settings (e.g., search engine, theme)
 
-We **exclude**:
+I **exclude**:
+
 - Cache, history, favicons, and extension binaries
 
 ---
@@ -23,6 +26,7 @@ We **exclude**:
 ## Files Tracked in Repo
 
 **Tracked paths:**
+
 ```
 .config/BraveSoftware/Brave-Browser/Default/Bookmarks
 .config/BraveSoftware/Brave-Browser/Default/Preferences
@@ -51,6 +55,7 @@ This ensures the settings are restored to the appropriate path after installatio
 To avoid tracking large or sensitive files, we include:
 
 **.config/BraveSoftware/Brave-Browser/Default/.gitignore**
+
 ```gitignore
 History
 Favicons
@@ -62,6 +67,7 @@ Top Sites
 ## Extensions
 
 The `Extensions/` directory is **not** tracked. This is intentional:
+
 - Brave may re-download extensions
 - Extension data is often tied to specific OS or session states
 - It may break portability
@@ -72,3 +78,11 @@ The `Extensions/` directory is **not** tracked. This is intentional:
 
 - Bookmarks were imported from the user's Windows installation and can be updated later.
 - Extensions can be reinstalled manually or through Brave's sync feature if needed.
+
+
+
+--- 
+
+## ## Tags
+
+ #config #May2025

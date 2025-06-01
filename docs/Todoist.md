@@ -21,6 +21,7 @@ Location in repo: `.local/share/applications/todoist.desktop`
 Symlinked to: `~/.local/share/applications/todoist.desktop`
 
 Contents:
+
 ```ini
 [Desktop Entry]
 Name=Todoist
@@ -48,6 +49,7 @@ Ensure the `Icon=todoist` line in the `.desktop` file references this correctly.
 ## Dotbot Configuration
 
 Example `install.conf.yaml` entries:
+
 ```yaml
 - link:
     ~/.local/share/applications/todoist.desktop: .local/share/applications/todoist.desktop
@@ -62,4 +64,3 @@ Example `install.conf.yaml` entries:
 - This setup does **not** include offline support — use your mobile app for that.
 - No native system tray or notifications — this is just a minimal web app window.
 - You must have Brave installed and accessible as `brave-browser`.
-

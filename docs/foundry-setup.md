@@ -9,13 +9,13 @@ This file documents how to manually set up Foundry VTT on systems where it will 
 1. Download Foundry VTT from the [official website](https://foundryvtt.com/)
 
 2. Extract the downloaded archive to your home folder (or any preferred location):
-
+   
    ```bash
    tar -xvf FoundryVTT-12.331.zip -C ~/
    ```
 
 3. Optional: Rename the folder for clarity:
-
+   
    ```bash
    mv ~/FoundryVTT-12.331 ~/FoundryVTT
    ```
@@ -74,6 +74,3 @@ chmod +x ~/.local/share/applications/foundryvtt.desktop
 - You can now search for "Foundry VTT" in your launcher and pin it to your dock or favorites.
 - This setup is **not included** in the main config-files repo or automation, as it is considered optional.
 - Future enhancements could include symbolic link support or environment detection for smoother integration.
-
-
-

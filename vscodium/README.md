@@ -75,6 +75,9 @@ codium --install-extension Codeium.codeium-<version>.vsix
 - Windsurf may still appear under the extension ID `codeium.codeium`
 - Vim keybindings are enabled via the `vscodevim` extension
 - Nord Arctic theme is recommended for visual consistency with terminal and other tools
-```
----
+  
+  ```
+  
+  ```
 
+---

@@ -26,5 +26,3 @@ git status
 git add <file>
 git commit -m "Your message"
 git push origin main
-
-

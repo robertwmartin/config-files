@@ -1,11 +1,17 @@
 # Vim Mode Cheat Sheet for VSCodium
 
+Useful commands for working with Vim or plain old vi.
+
+---
+
 ## Modes
 
 - `Esc` → Normal mode (navigate, delete, etc.)
 - `i` → Insert mode (start typing)
 - `v` → Visual mode (select text)
 - `:` → Command mode (save, quit, etc.)
+
+---
 
 ## Insert Mode Shortcuts
 
@@ -15,6 +21,8 @@
 - `A` → Append at end of line
 - `o` → New line below
 - `O` → New line above
+
+---
 
 ## Normal Mode Navigation
 
@@ -28,6 +36,8 @@
 - `G` → Bottom of file
 - `:N` → Go to line N
 
+---
+
 ## Editing
 
 - `x` → Delete character
@@ -37,11 +47,15 @@
 - `u` → Undo
 - `Ctrl + r` → Redo
 
+---
+
 ## Search
 
 - `/pattern` → Search forward
 - `?pattern` → Search backward
 - `n` / `N` → Repeat search forward / backward
+
+---
 
 ## Commands (press `:` first)
 
@@ -49,3 +63,9 @@
 - `:q` → Quit
 - `:wq` → Save and quit
 - `:q!` → Quit without saving
+
+---
+
+## Tags:
+
+ #Reference #Apr2025

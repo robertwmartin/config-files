@@ -24,11 +24,11 @@ CopyQ is a powerful clipboard manager that runs in the background and keeps a se
 
 ### Final Config
 
-| Action              | Shortcut | Notes                              |
-|---------------------|----------|------------------------------------|
-| Show clipboard menu | F9       | Reliable in all contexts, including Kitty |
-| Paste in terminal   | Ctrl+Shift+V | Default for most terminals     |
-| Show notifications  | Meta+N   | GNOME system notification shortcut |
+| Action              | Shortcut     | Notes                                     |
+| ------------------- | ------------ | ----------------------------------------- |
+| Show clipboard menu | F9           | Reliable in all contexts, including Kitty |
+| Paste in terminal   | Ctrl+Shift+V | Default for most terminals                |
+| Show notifications  | Meta+N       | GNOME system notification shortcut        |
 
 > F9 was chosen for reliability and ease of use, as Meta+V may behave inconsistently in terminal emulators like Kitty.
 

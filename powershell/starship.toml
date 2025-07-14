@@ -1,0 +1,30 @@
+format = """\
+[rwm@seaborg](yellow) in $directory$git_branch$git_status $time
+$character\
+"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "blue"
+format = "[$path]($style) "
+
+[git_branch]
+symbol = " on git:"
+format = "[$symbol$branch]($style)"
+style = "green"
+
+[git_status]
+format = " [$all_status]($style)"
+style = "red"
+disabled = false
+
+[time]
+disabled = false
+time_format = "%H:%M:%S"
+style = "dimmed white"
+format = "[$time]($style)"
+
+[character]
+success_symbol = "[\\$](bold green)"
+error_symbol = "[\\$](bold red)"

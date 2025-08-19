@@ -3,6 +3,7 @@ christian-kohler.path-intellisense
 codeium.codeium
 dbaeumer.vscode-eslint
 editorconfig.editorconfig
+enkia.tokyo-night
 esbenp.prettier-vscode
 ms-python.debugpy
 ms-python.pylint

@@ -70,12 +70,6 @@ See dedicated documentation:
 
 ---
 
-## To Remove
-
-- **Worldographer**: Remove via package manager or delete manually
-
----
-
 ## Notes
 
 - LibreOffice: Ubuntu 24.04 LTS ships with outdated version

@@ -22,21 +22,20 @@ fi
 if [ ! -d "$HOME/config-files" ]; then
   echo "📥 Cloning config-files repo"
   git clone https://github.com/robertwmartin/config-files.git "$HOME/config-files"
-  cd "$HOME/config-files"
-if [ ! -f dotbot/bin/dotbot ]; then
-  echo "🔁 Initializing Git submodules..."
-  git submodule update --init --recursive
-fi
-./install.sh
 else
   echo "📂 config-files already exists"
 fi
 
-# Step 3: Initialize git submodules
-git submodule update --init --recursive
-
-# Step 4: Run the installer
+# Step 3: Change to repo directory
 cd "$HOME/config-files"
+
+# Step 4: Initialize git submodules if needed
+if [ ! -f dotbot/bin/dotbot ]; then
+  echo "🔁 Initializing Git submodules..."
+  git submodule update --init --recursive
+fi
+
+# Step 5: Run the installer
 echo "⚙️ Running Dotbot installer"
 ./install.sh
 

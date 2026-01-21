@@ -1,0 +1,7 @@
+# Never commit private keys
+*
+!config
+!*.pub
+!.gitignore
+
+

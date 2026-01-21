@@ -37,3 +37,52 @@ Ctrl+Shift+Left	Switch to previous tab
 Ctrl+Shift+N	Launch a new independent Kitty window
 
     The Ctrl+Shift+N shortcut uses launch --detach to open a separate Kitty instance on another monitor or workspace.
+
+
+## SSH Configuration
+
+### GitHub Access
+
+SSH keys are used for GitHub authentication instead of Personal Access Tokens.
+
+#### Initial Setup on New System
+
+1. **Generate SSH key pair:**
+```bash
+   ssh-keygen -t ed25519 -C "$(hostname)" -f ~/.ssh/github_$(hostname)
+```
+   - Use a strong passphrase when prompted
+   - Creates `~/.ssh/github_<hostname>` (private) and `~/.ssh/github_<hostname>.pub` (public)
+
+2. **Set proper permissions:**
+```bash
+   chmod 700 ~/.ssh
+   chmod 600 ~/.ssh/github_$(hostname)
+   chmod 644 ~/.ssh/github_$(hostname).pub
+```
+
+3. **Add public key to GitHub:**
+   - Display key: `cat ~/.ssh/github_$(hostname).pub`
+   - Go to GitHub Settings → SSH and GPG keys → New SSH key
+   - Paste the public key content
+   - Title: hostname (e.g., "bethe")
+
+4. **Update SSH config:**
+   Edit `~/.ssh/config` and update the `IdentityFile` line:
+```
+   IdentityFile ~/.ssh/github_<hostname>
+```
+
+5. **Test connection:**
+```bash
+   ssh -T git@github.com
+```
+
+#### Key Management
+
+- Private keys: Never commit to version control
+- Public keys: Safe to share/commit
+- Passphrases: Cached by gnome-keyring during session
+- Config file: Managed via dotfiles (symlinked automatically)
+
+

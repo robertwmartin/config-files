@@ -48,6 +48,7 @@ sudo snap install steam
 ## APT Packages (Manual Install)
 ```bash
 sudo apt install pdfarranger
+sudo apt install cifs-utils  # Sys admin tools required for persistent mount points to NAS
 ```
 
 ---
@@ -75,6 +76,7 @@ See dedicated documentation:
   - Current workaround: Manual updates via APT
   - Consider: Switching to Flatpak for newer releases
 - Kitty: Using manual install (curl) instead of Snap due to version lag
+- Consider moving cifs-utils to automated install
 
 ---
 

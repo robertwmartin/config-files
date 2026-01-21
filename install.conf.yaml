@@ -169,6 +169,7 @@
     ~/.config/copyq: .config/copyq
     ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks: .config/BraveSoftware/Brave-Browser/Default/Bookmarks
     ~/.config/BraveSoftware/Brave-Browser/Default/Preferences: .config/BraveSoftware/Brave-Browser/Default/Preferences
+    ~/.ssh/config: ssh/config
 
 # ────── Display notification to run chsh command ─────
 - shell:

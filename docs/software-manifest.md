@@ -23,7 +23,6 @@ sudo snap install discord
 sudo snap install signal-desktop
 sudo snap install slack
 sudo snap install todoist
-sudo snap connect todoist:audio-record  # Required for Ramble feature
 
 # Email & Calendar
 sudo snap install proton-mail

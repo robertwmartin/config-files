@@ -47,8 +47,14 @@ sudo snap install steam
 
 ## APT Packages (Manual Install)
 ```bash
+# Productivity
 sudo apt install pdfarranger
-sudo apt install cifs-utils  # Sys admin tools required for persistent mount points to NAS
+
+# Sys admin tools required for persistent mount points to NAS
+sudo apt install cifs-utils  
+
+# Database
+sudo apt install sqlitebrowser
 ```
 
 ---

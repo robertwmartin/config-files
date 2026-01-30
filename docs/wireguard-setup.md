@@ -34,7 +34,7 @@ This guide documents the WireGuard VPN configuration for secure remote access to
 - Go to **VPN → WireGuard → Instances**
 - Click Add
 - Name: `wg0`
-- Listen Port: `51820`
+- **Listen Port: `51820`** CRITICAL: Must be explicitly set.
 - Tunnel Address: `10.0.8.1/24`
 - Click "Generate new keypair"
 - Save and note the **Public Key**

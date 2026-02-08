@@ -49,6 +49,7 @@ sudo snap install steam
 ```bash
 # Productivity
 sudo apt install pdfarranger
+sudo apt install rpi-imager # App to burn images to USB drives
 
 # Sys admin tools required for persistent mount points to NAS
 sudo apt install cifs-utils  
@@ -78,9 +79,6 @@ See dedicated documentation:
 
 ## Notes
 
-- LibreOffice: Ubuntu 24.04 LTS ships with outdated version
-  - Current workaround: Manual updates via APT
-  - Consider: Switching to Flatpak for newer releases
 - Kitty: Using manual install (curl) instead of Snap due to version lag
 - Consider moving cifs-utils to automated install
 
@@ -88,4 +86,4 @@ See dedicated documentation:
 
 ## Last Updated
 
-January 2026
+07Feb2026

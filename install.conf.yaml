@@ -154,6 +154,7 @@
     ~/.config/BraveSoftware/Brave-Browser/Default/Bookmarks: .config/BraveSoftware/Brave-Browser/Default/Bookmarks
     ~/.config/BraveSoftware/Brave-Browser/Default/Preferences: .config/BraveSoftware/Brave-Browser/Default/Preferences
     ~/.ssh/config: ssh/config
+    ~/.config/pdfarranger/config.ini: .config/.pdfarranger/config.ini
 
 # ────── Display notification to run chsh command ─────
 - shell:

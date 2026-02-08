@@ -1,0 +1,15 @@
+# WireGuard VPN Configuration Template
+# Copy to /etc/wireguard/wg0.conf and replace placeholders
+
+[Interface]
+# Generate with: wg genkey | tee privatekey | wg pubkey > publickey
+PrivateKey = YOUR_LAPTOP_PRIVATE_KEY_HERE
+Address = 10.0.8.2/24
+# DNS = 192.168.10.1  # Optional: Uncomment if you want home DNS for local hostnames
+
+[Peer]
+# OPNsense server public key (get from OPNsense: VPN → WireGuard → Local)
+PublicKey = YOUR_OPNSENSE_PUBLIC_KEY_HERE
+Endpoint = supergeer.robertwmartin.com:51820
+AllowedIPs = 192.168.10.0/24
+PersistentKeepalive = 25

@@ -34,6 +34,7 @@ sudo snap install foliate
 
 # Notes & Knowledge Management
 sudo snap install obsidian
+sudo snap install zotero
 
 # Gaming
 sudo snap install steam

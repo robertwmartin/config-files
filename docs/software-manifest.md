@@ -61,6 +61,14 @@ sudo apt install sqlitebrowser
 
 ---
 
+## Manual installs instead of using the available Snap
+```bash
+# Joplin
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh
+```
+
+---
+
 ## .deb Manual Downloads
 
 **Zoom**

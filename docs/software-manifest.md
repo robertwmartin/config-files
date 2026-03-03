@@ -57,6 +57,9 @@ sudo apt install cifs-utils
 
 # Database
 sudo apt install sqlitebrowser
+
+# Dev Tools
+sudo apt install golang-go
 ```
 
 ---

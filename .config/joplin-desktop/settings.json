@@ -1,10 +1,31 @@
 {
 	"$schema": "https://joplinapp.org/schema/settings.json",
 	"altInstanceId": "",
+	"editor.codeView": false,
+	"richTextBannerDismissed": true,
 	"locale": "en_GB",
+	"dateFormat": "DD.MM.YYYY",
 	"theme": 1,
+	"themeAutoDetect": false,
+	"preferredLightTheme": 6,
+	"preferredDarkTheme": 6,
+	"notes.sortOrder.field": "title",
+	"notes.sortOrder.reverse": false,
+	"notes.perFieldReverse": {
+		"user_updated_time": false,
+		"user_created_time": true,
+		"title": false,
+		"order": false,
+		"todo_due": true,
+		"todo_completed": true
+	},
+	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": false,
 	"markdown.plugin.typographer": false,
+	"showTrayIcon": true,
+	"style.editor.fontFamily": "Ubuntu Mono",
+	"style.editor.monospaceFontFamily": "JetBrains Mono NL",
+	"style.viewer.fontFamily": "Source Serif 4",
 	"ui.layout": {
 		"key": "root",
 		"children": [
@@ -15,7 +36,7 @@
 			},
 			{
 				"key": "noteList",
-				"width": 250,
+				"width": 256,
 				"visible": true
 			},
 			{
@@ -29,8 +50,12 @@
 		"editor",
 		"viewer"
 	],
+	"editor.spellcheckBeta": true,
+	"editor.inlineRendering": true,
 	"api.token": "49f8d1f2200bff7f652a89e162a4423a6b29f5b86d7fd051825983a5842ca35073ac7fba13170fe815731e3c2df354608d93c0fbfb483a31e929d836c934250d",
 	"spellChecker.languages": [
-		"en-US"
-	]
+		"en-US",
+		"en-CA"
+	],
+	"windowContentZoomFactor": 110
 }

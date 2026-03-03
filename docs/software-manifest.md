@@ -72,9 +72,22 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 ## .deb Manual Downloads
 
 **Zoom**
-- Download from: https://zoom.us/download
+- Download from: `https://zoom.us/download`
 - Install: `sudo dpkg -i zoom_amd64.deb`
 - Fix dependencies if needed: `sudo apt install -f`
+
+
+**Hugo**
+- Download: `wget https://github.com/gohugoio/hugo/releases/download/v0.157.0/hugo_extended_0.157.0_linux-amd64.deb`
+- Install: `sudo dpkg -i hugo_extended_0.157.0_linux-amd64.deb`
+
+---
+
+## Flatpak installs
+
+**Newsflash RSS Reader**
+- Download flatpak file from `https://dl.flathub.org/repo/appstream/io.gitlab.news_flash.NewsFlash.flatpakref`
+- Install: `flatpak install filename`
 
 ---
 

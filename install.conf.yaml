@@ -155,6 +155,12 @@
     ~/.config/BraveSoftware/Brave-Browser/Default/Preferences: .config/BraveSoftware/Brave-Browser/Default/Preferences
     ~/.ssh/config: ssh/config
     ~/.config/pdfarranger/config.ini: .config/.pdfarranger/config.ini
+    ~/.local/bin/kitty:
+      path: /opt/kitty/kitty.app/bin/kitty
+      force: true
+    ~/.local/bin/kitten:
+      path: /opt/kitty/kitty.app/bin/kitten
+      force: true
 
 # ────── Display notification to run chsh command ─────
 - shell:

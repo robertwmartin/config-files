@@ -84,6 +84,15 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 - Download: `wget https://github.com/gohugoio/hugo/releases/download/v0.157.0/hugo_extended_0.157.0_linux-amd64.deb`
 - Install: `sudo dpkg -i hugo_extended_0.157.0_linux-amd64.deb`
 
+
+**PwSafe**
+- Download the current package: `https://sourceforge.net/projects/passwordsafe/files/Linux/`. Make sure to download the `passwordsafe-ubuntu*.deb` version
+- Install dependencies
+    - `sudo apt install libwxgtk3.2-1`
+    - `sudo apt install libxerces-c3.2`
+    - `sudo apt install libykpers-1-1`
+- Install: `sudo dpkg -i filename.deb`
+
 ---
 
 ## Flatpak installs

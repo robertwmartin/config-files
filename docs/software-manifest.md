@@ -108,6 +108,7 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 See dedicated documentation:
 - **Foundry VTT**: `docs/foundry-setup.md`
 - **OneDrive rclone**: `docs/OneDriveCloudMount.md`
+- **Mozilla.AI any-llm**: `docs/any-llm-sdk-setup.md`
 
 ---
 
@@ -120,4 +121,4 @@ See dedicated documentation:
 
 ## Last Updated
 
-07Feb2026
+13Apr2026

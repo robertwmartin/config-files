@@ -1,6 +1,9 @@
 # Ignore OS & editor cruft
-.DS_Store
 Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
 *.swp
 *.swo
 
@@ -11,4 +14,13 @@ Thumbs.db
 
 # Optional: ignore backup vsix or cache folders
 vscodium/extensions/*.vsix~
+
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+*_ecdsa
+*_ed25519
 

@@ -95,6 +95,10 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 
 ---
 
+## App Center installs
+
+- GSConnect
+
 ## Flatpak installs
 
 **Newsflash RSS Reader**

@@ -95,9 +95,16 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 
 ---
 
-## App Center installs
+## GNOME Shell Extensions
 
-- GSConnect
+**GSConnect**
+- `https://github.com/GSConnect/gnome-shell-extension-gsconnect/wiki/Installation#standard`
+- Install GSConnect from GNOME Shell Extensions website
+- Run `extensions` from Linux to make sure GSConnect is enabled
+- Install KDE Connect on phone from app store
+- Open the KDE Connect app on the phone to pair with the Linux computer
+
+---
 
 ## Flatpak installs
 
@@ -125,4 +132,4 @@ See dedicated documentation:
 
 ## Last Updated
 
-13Apr2026
+28Apr2026

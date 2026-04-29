@@ -60,6 +60,9 @@ sudo apt install sqlitebrowser
 
 # Dev Tools
 sudo apt install golang-go
+
+# Audio and Video
+sudo apt install audacity
 ```
 
 ---
@@ -132,4 +135,4 @@ See dedicated documentation:
 
 ## Last Updated
 
-28Apr2026
+29Apr2026

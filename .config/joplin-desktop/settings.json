@@ -2,6 +2,7 @@
 	"$schema": "https://joplinapp.org/schema/settings.json",
 	"altInstanceId": "",
 	"editor.codeView": false,
+	"sync.target": 0,
 	"richTextBannerDismissed": true,
 	"locale": "en_GB",
 	"dateFormat": "DD.MM.YYYY",

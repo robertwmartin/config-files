@@ -50,6 +50,7 @@ sudo snap install steam
 ```bash
 # Productivity
 sudo apt install pdfarranger
+sudo apt install evince
 sudo apt install rpi-imager # App to burn images to USB drives
 
 # Sys admin tools required for persistent mount points to NAS

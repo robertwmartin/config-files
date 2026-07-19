@@ -41,3 +41,8 @@ rclone check mywebdav: ~/webdav-backup
 
 This compares source and destination and reports any mismatches or missing files — good peace of mind after a big transfer.
 A couple of practical notes: if you have a lot of very small files, transfer speed will be bottlenecked more by request overhead than bandwidth — bumping --transfers and --checkers helps there. And if you want this to run automatically on a schedule later, it's a straightforward cron job once you've confirmed the command works manually.
+
+## Other options
+By default, rclone will retry three times. That can be changed with `--retries x` where x is something other than 3.
+
+

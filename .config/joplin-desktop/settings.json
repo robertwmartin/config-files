@@ -54,6 +54,7 @@
 	"editor.spellcheckBeta": true,
 	"editor.inlineRendering": true,
 	"api.token": "49f8d1f2200bff7f652a89e162a4423a6b29f5b86d7fd051825983a5842ca35073ac7fba13170fe815731e3c2df354608d93c0fbfb483a31e929d836c934250d",
+	"spellChecker.enabled": false,
 	"spellChecker.languages": [
 		"en-US",
 		"en-CA"

@@ -45,4 +45,9 @@ A couple of practical notes: if you have a lot of very small files, transfer spe
 ## Other options
 By default, rclone will retry three times. That can be changed with `--retries x` where x is something other than 3.
 
+## Don't use `rclone sync` without understanding what will happen
+`rclone sync` — the destructive one
+
+Makes the destination an exact mirror of the source. Anything on the destination that isn't on the source gets deleted. This is the one to be careful with — if you ran sync with Sqyre as source and your local folder as destination, any local files not present on Sqyre would be wiped out.
+
 

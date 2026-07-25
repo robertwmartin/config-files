@@ -10,7 +10,7 @@
 	"themeAutoDetect": false,
 	"preferredLightTheme": 6,
 	"preferredDarkTheme": 6,
-	"notes.sortOrder.field": "title",
+	"notes.sortOrder.field": "order",
 	"notes.sortOrder.reverse": false,
 	"notes.perFieldReverse": {
 		"user_updated_time": false,
@@ -18,7 +18,7 @@
 		"title": false,
 		"order": false,
 		"todo_due": true,
-		"todo_completed": true
+		"todo_completed": false
 	},
 	"newNoteFocus": "title",
 	"markdown.plugin.softbreaks": false,

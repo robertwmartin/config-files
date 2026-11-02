@@ -60,6 +60,9 @@ sudo apt install golang-go
 
 # Audio and Video
 sudo apt install audacity
+
+# Useful app for disabling NUM LOCK for SWTOR
+sudo apt install numlockx
 ```
 
 ---
